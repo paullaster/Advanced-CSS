@@ -1,0 +1,8 @@
+//this clearfix mixin help regain the height of floated rows
+@mixin clearFix {
+    &::after{
+ content: "";
+ display: table;
+ clear: both;
+    }
+}

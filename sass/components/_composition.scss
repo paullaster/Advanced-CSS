@@ -1,0 +1,41 @@
+.composition{
+    position: relative;
+
+    &__photo{
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem 0 rgba($color-black,.4);
+        border-radius: .2rem;
+        position:absolute;
+        z-index: 10;
+        transition: all 1s ease;
+        outline-offset: 2rem; // this defines the space between the content and the border
+
+        &--pic--1{
+            left: 0;
+            top: -2rem;
+        }
+        &--pic--2{
+            right: 0;
+            top: 2rem;
+        }
+        &--pic--3{
+            left: 20%;
+            top: 10rem;
+        }
+        &:hover{
+            outline: 1.5rem solid $color-primary; //work like a border
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem 0 rgba($color-black, .5);
+            z-index: 20;
+        }
+
+    }
+                                //**this notes inside here were written when writting the code to help me avoid mistake and confusing concepts and to help and developer who would wish to update my code or learn using my code** "i am paullaster okoth the initial developer of this code"
+    //to make the size of the images not hovered decease when one of the images are hovered,
+    // we nest the hover state of photo into the hover state of the whole composition
+    // and use the :not() pseudo selector. thank you for reading  by Paullaster 
+    &:hover &__photo:not(:hover){
+        transform: scale(0.95);
+    }
+}
+

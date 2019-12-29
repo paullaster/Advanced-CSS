@@ -1,0 +1,39 @@
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+@import "./base/animation";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "./components/button";
+@import "./components/card";
+@import "./components/composition";
+@import "./components/feature-box";
+
+@import "./layout/grid";
+@import "./layout/header";
+
+
+
+@import "./pages/home";
+
+
+
+// this file stricktly obey the programming 'DRY' rule,
+// D - Do not 
+// R - Repeate
+// Y - Yourslef
+
+//this page is only meant for importing from patrial files.
+
+//all the codes are sorted into respective files in respective folders
+// e.g varible def are located "abstract/_variables.scss"
+// base/typography.scss
+
+//body styles that relates to typography are sorted in the typography file and the base styles are sorted in the base file in the base folder
+
+// *all these was written by the author and developer of this page*
+
+// *Dev. Paullaster Okoth , Software Engineer  Web developer and Tech enthusiast*

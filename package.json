@@ -1,0 +1,25 @@
+{
+  "name": "advanced-css-project",
+  "version": "1.1.1",
+  "description": "jotour services page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss css/app.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paullaster/Advanced-css.git"
+  },
+  "keywords": [
+    "devpaullaster"
+  ],
+  "author": "paullaster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paullaster/Advanced-css/issues"
+  },
+  "homepage": "https://github.com/paullaster/Advanced-css#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

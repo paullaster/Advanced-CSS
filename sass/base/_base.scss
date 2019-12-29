@@ -1,0 +1,15 @@
+// the basic defination about the page are contained here
+
+*, *::after, *::before{    //styles here are reset styles. are used to reset the page.
+    margin: 0;       
+    padding: 0;
+    box-sizing: inherit;
+}
+//the root element style defines the base fonts for every page thus sorted in the _base file
+html{
+    // this defines the equavalence of 1rem
+    font-size: 62.5%;
+}
+body{
+    box-sizing: border-box;
+}

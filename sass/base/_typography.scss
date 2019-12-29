@@ -1,0 +1,72 @@
+//all headings are sorted in the typography file
+
+// all the body styles that relate to typography are sorted in the typography file
+body{
+font-family: "lato" , sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+   
+   
+    &--main{
+       display: block;
+       font-size: 6rem;
+       font-weight: 400;
+       letter-spacing: 4rem;
+       animation-name: moveInLeft;
+       animation-duration: 5s;
+       animation-timing-function: ease-out;
+       /*
+       animation-delay: 2s;
+       animation-iteration-count: 3;
+       */
+      }
+      &--sub{
+       display: block;
+       font-size: 2rem;
+       font-weight: 70rem;
+       letter-spacing: 1.8rem;
+       animation-name: moveInRight;
+       animation-duration: 5s;
+       animation-timing-function: ease-in;
+      }
+   }
+   .heading-secondary{
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -mos-background-clip: text;
+        -o-background-clip: text;
+        -ms-background-clip: text;
+        color: transparent;
+        letter-spacing: .2rem;
+        transition: all .2s ease;
+         &:hover{
+             transform: skewY(2deg) skewX(15deg) scale(1.1);
+             text-shadow: .5rem 1rem 2rem rgba($color-black,  .2);
+         }
+   }
+   .heading-tertiary{
+       font-size: $default-font-size;
+       font-weight: 700;
+       text-transform: uppercase;
+   }
+   .paragraph{
+       font-size: $default-font-size;
+       &:not(:last-child){
+           margin-bottom: 3rem;
+       }
+   }
