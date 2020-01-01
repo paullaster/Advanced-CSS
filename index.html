@@ -16,6 +16,22 @@
     <title>Jotours | Exciting and Adventurous Tours</title>
 </head>
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__items"><a href="#" class="navigation__links">About Jotours</a></li>
+                <li class="navigation__items"><a href="#" class="navigation__links">Our services</a></li>
+                <li class="navigation__items"><a href="#" class="navigation__links">Strories</a></li>
+                <li class="navigation__items"><a href="#" class="navigation__links">Popular tours</a></li>
+                <li class="navigation__items"><a href="#" class="navigation__links">Book now</a></li>
+            </ul>
+        </nav>        
+    </div>
     <header class="header">
         <div class="header__log-box">
             <img src="./images/meta ajax-02.png" alt="JOTOURS LOGO" class="header__logo">
@@ -135,7 +151,7 @@
                 </div>
             </div>
          </section>
-         <section class="section-tours">
+         <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                  most popular tours
@@ -170,7 +186,7 @@
                                     <p class="card__price-only">only</p>
                                     <p class="card__price-value">$ 300</p>
                                 </div>
-                                <a href="#" class="btn btn--white">book now</a>
+                                <a href="#popup" class="btn btn--white">book now</a>
                         </div>
                     </div>
                 </div>
@@ -203,7 +219,7 @@
                              <p class="card__price-only">only</p>
                              <p class="card__price-value">$ 500</p>
                          </div>
-                         <a href="#" class="btn btn--white">book now</a>
+                         <a href="#popup" class="btn btn--white">book now</a>
                      </div>
                     </div>
                 </div> 
@@ -236,7 +252,7 @@
                                      <p class="card__price-only">only</p>
                                      <p class="card__price-value">$ 900</p>
                                  </div>
-                                 <a href="#" class="btn btn--white">book now</a>
+                                 <a href="#popup" class="btn btn--white">book now</a>
                          </div>
                      </div>
                  </div>
@@ -248,7 +264,163 @@
             <a href="#" class="btn  btn--green">discover all tours</a>
         </div>
      </section>
+     <section class="section-stories">
+
+        <div class="bg-video">
+            <video  class="bg-video__content" autoplay muted loop>
+                <source src="./images/Rayvanny - I love you (Official Music Video).mp4" type="video/mp4">
+                    Your browser is not supported!
+            </video>
+        </div>
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+                we make people genuinely happy
+            </h2>
+         </div>
+         <div class="row">
+             <div class="story">
+                 <figure class="story__shape">
+                    <img src="./images/anime3.jpg" alt=" image of mary" class="story__image">
+                    <figcaption class="story__caption">charity nyaboke</figcaption>
+                 </figure>
+                 <div class="story__">
+                     <h3 class="heading-tertiary    u-margin-bottom-small">
+                         i had the best week ever with y family
+                     </h3>
+                     <p class="paragraph">eveything was beyond my expection, 
+                         have never felt more comfortable on any tour like i
+                         felt this time. you made me got whatever have been looking for when i go for a tour.
+                        i had more than fun, enjoyed ourselves and we never worried about stay untill our tour
+                        ended
+                     </p>
+                 </div>
+             </div>
+         </div>
+         <div class="row">
+            <div class="story">
+                <figure class="story__shape">
+                   <img src="./images/geek-laster.jpg" alt=" image of mary" class="story__image">
+                   <figcaption class="story__caption">paullaster okoth</figcaption>
+                </figure>
+                <div class="story__">
+                    <h3 class="heading-tertiary    u-margin-bottom-small">
+                        wow! my life is completely different now
+                    </h3>
+                    <p class="paragraph">loving extra ordinary staffs makes me an extra ordinary person.
+                        it honestly amazed me because not even in any single day, i ever had the 
+                        experince i got, you completely inspired my zeal to dare always. i cant 
+                        fail to quote the enjoyment i had and it was my first time to feel nature 
+                        at it's best.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="u-center-text u-margin-top-huge">
+
+            <a href="" class="btn-text">Read all stories &rarr;</a>
+        </div>
+       
+
+     </section>
+     <section class="section-book">
+         <div class="row">
+             <div class="book">
+                 <div class="book__form">
+                     <form action="POST" class="form">
+                        <div class="u-margin-bottom-medium">
+                            <h2 class="heading-secondary">
+                             start booking now
+                            </h2>
+                        </div>
+                         <div class="form__grp">
+                             <input type="text" class="form__input"  id="name"  placeholder="Full Name" required>
+                             <label for="name" class="form__label">Full Name</label>
+                         </div>
+                         <div class="form__grp">
+                            <input type="email" class="form__input"  id="email"  placeholder="Email addrss" required>
+                            <label for="email" class="form__label">Email address</label>
+                        </div>
+                        <div class="form__grp">
+                            <div class="form__radio-grp u-margin-bottom-medium">
+                                <input type="radio" name="grp" class="form__radio-input"   id="small">
+                                <label for="small" class="form__radio-label">
+                                    <span class="form__radio-button"></span>
+                                    Small tour group</label>
+                            </div>
+
+                            <div class="form__radio-grp">
+                                    <input type="radio" name="grp" class="form__radio-input"   id="large">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Large tour group</label>
+                            </div>
+                        </div>
+                        <div class="form__grp">
+                            <button class="btn btn--green">Next step &Rarr;</button>
+                        </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </section>
  </main>
+
+ <footer class="footer">
+     <div class="footer__logo-box u-margin-bottom-big">
+         <img src="./images/android-chrome-512x512.png" alt="MATA logo" class="footer__logo">
+     </div>
+     <div class="row">
+         <div class="col-1-of-2">
+             <div class="footer__navigation">
+                 <ul class="footer__list">
+                     <li class="footer__items"><a href="#" class="footer__links">company</a></li>
+                     <li class="footer__items"><a href="#" class="footer__links">contact us</a></li>
+                     <li class="footer__items"><a href="#" class="footer__links">careers</a></li>
+                     <li class="footer__items"><a href="#" class="footer__links">Privacy Policy</a></li>
+                     <li class="footer__items"><a href="#" class="footer__links">Terms</a></li>
+                 </ul>
+             </div>
+         </div>
+         <div class="col-1-of-2">
+             <p class="footer__copyright">
+                 Built by <a href="https://github.com/paullaster" class="footer__links">Paullaster Okoth</a> to help market himself as the best web developer  <a href="mailto:paullasterokoth98@gmail.com" class="footer__links" target="blank">"Webmaster"</a>  with the current trending skills in web development. copyright &COPY; 2020.
+                 You are at liberty to use this webpage for both personal and commercial use, but NOT to claim it is your own design. Acredit to the original author Paullaster okoth, is highly appreciated!
+
+             </p>
+         </div> 
+     </div>
+ </footer>
+
+ <div class="popup" id="popup">
+    <div class="popup__content">
+       <div class="popup__left">
+           <img src="./images/anime3.jpg" alt="nyabokes picture" class="popus__img">
+           <img src="./images/geek-laster.jpg" alt="paullasters picture"  class="popus__img">
+       </div>
+       <div class="popup__right">
+           <a href="#section-tours" class="popup__close">&times;</a>
+           <h2 class="heading-secondary u-margin-bottom-small">
+               start booking now
+           </h2>
+           <h3 class="heading-tertiary u-margin-bottom-small">
+               important &ndash; Please read these terms before booking
+           </h3>
+           <p class="popup__text paragraph">
+               eveything was beyond my expection, 
+                        have never felt more comfortable on any tour like i
+                        felt this time. you made me got whatever have been looking for when i go for a tour.
+                       i had more than fun, enjoyed ourselves and we never worried about stay untill our tour
+                       ended.
+                       loving extra ordinary staffs makes me an extra ordinary person.
+                       it honestly amazed me because not even in any single day, i ever had the 
+                       experince i got, you completely inspired my zeal to dare always. i cant 
+                       fail to quote the enjoyment i had and it was my first time to feel nature 
+                       at it's best.
+           </p>
+           <a href="#" class="btn btn--green u ">Book now</a>
+       </div>
+    </div>
+</div>
     <!-- <section class="grid-test">
         <div class="row">
             <div class="col-1-of-2">
@@ -309,8 +481,9 @@
             <div class="col-3-of-4">
                 col 3 of 4
             </div>
-          
+        
         </div>
     </section> -->
+    
 </body>
 </html>

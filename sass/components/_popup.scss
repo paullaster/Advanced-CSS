@@ -1,0 +1,71 @@
+.popup{
+    background-color: rgba($color-black, .8);
+    height:100vh;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 180;
+    opacity:0;
+    visibility: none;
+    transition: all .4s ease;
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__close{
+        &:link,
+        &:visited{
+            text-decoration: none;
+            color:$color-grey-dark;
+            position:absolute;
+            top:2.5rem;
+            right:2.5rem;
+            font-size:3rem;
+            display: inline-block;
+
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__content{
+       @include absCenter;
+        width: 75%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem 0 rgba($color-black, .3);
+        border-radius:.3rem;
+        display: table;
+        overflow: hidden;
+    }
+
+    &__left{
+        width:33.33333333%;
+        display: table-cell;
+
+    }
+    &__right{
+        width:66.666666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding:3rem 5rem;
+    }
+    &__img{
+        width:100%;
+        display: block;
+    }
+
+    &__text{
+        margin-bottom: 5rem;
+        column-count:2;
+        column-gap:4rem;
+        column-rule:.1rem solid $color-grey-light-2;
+
+        hyphens: auto;
+    }
+
+   
+}

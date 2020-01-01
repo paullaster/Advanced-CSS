@@ -1,6 +1,7 @@
 // this defines buttons
 
 .btn{
+    &,//just button for the <button> element
     &:link,
 &:visited{
     text-transform: uppercase;
@@ -11,8 +12,13 @@
     transition: all .3s;
     position: relative;
     font-size: $default-font-size;
+
+    //changes for the //<button> element  //laster
+    border:none;
+    cursor:pointer;
 }
-&:hover{
+&:hover
+{
     transform: translateY(-3px);
     box-shadow: 0 0 2rem 0 $color-heavy-grey;
 
@@ -21,7 +27,9 @@
         opacity: 0;
     }
 }
-&:active{
+&:active,
+&:focus{
+    outline:none;
     transform: translateY(-1px);
     box-shadow: 0 0 2rem 0 $color-heavy-grey;
 }
