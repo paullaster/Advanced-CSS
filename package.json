@@ -4,7 +4,14 @@
   "description": "jotour services page",
   "main": "index.js",
   "scripts": {
-    "compile:sass":"node-sass sass/main.scss css/app.css -w"
+    "watch:sass": "node-sass sass/main.scss css/app.css -w",
+    "Devserver":"live-server",
+    "start":" npm-run-all --parallel Devserver watch:sass",
+
+    "compile:sass": "node-sass sass/main.scss css/app.comp.css ",
+    "concat:css": "concat -o css/app.concat.css css/app.comp.css  css/icon-font.css",
+    "compress:css": "node-sass  css/app.concat.css  css/app.css --output-style compressed",
+    "build": "npm-run-all  compile:sass concat:css  compress:css"
   },
   "repository": {
     "type": "git",
@@ -20,6 +27,13 @@
   },
   "homepage": "https://github.com/paullaster/Advanced-css#readme",
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "autoprefixer": "^9.7.3",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3"
+  },
+  "dependencies": {
+    "prettier": "^1.19.1"
   }
 }

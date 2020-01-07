@@ -10,13 +10,26 @@
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    @include respond(phone){
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
     &__log-box{
         position: absolute;
-        top: 4rem;
-        left: 4rem;
+        top: 6rem;
+        left: 6rem;
+
+        @include respond(tab-port){
+            top: 4rem;
+            left: 4rem;
        }
+    }
        &__logo{
         height: 9.5rem;
+
+        @include respond(tab-port){
+            height: 6.5rem;
+       }
        }
        /*
        .logo:hover{
@@ -33,4 +46,5 @@
           text-align: center;
        }
 }
+
 

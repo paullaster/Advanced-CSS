@@ -9,6 +9,17 @@
     font-size: $default-font-size; 
     transform: skewX(-12deg);
 
+    @include respond(tab-port){
+        width: 100%;
+        padding: 4rem;  
+    padding-left: 7rem;
+
+    }
+
+    @include respond(phone){
+        transform: skewX(0);
+    }
+
     &>*{ //select all the story direct child e.g shape and text because they are directly attached to story *by paullaster*
         transform: skewX(12deg);
     }
@@ -18,11 +29,20 @@
         height:15rem;
        // background-color: orangered;
         float: left;
-        shape-outside: circle(50% at 50% 50%); //make/define where the text flow around shapes
-
-        clip-path:circle(50% at 50% 50%); // draws a circular shape
         transform: translateX(-3rem) skewX(12deg);; //creates space btn the circle and the text i.e the translate value but the skewX takes the shape back to initiall position before the story was skewed by equal degree in the opposite direction  *paullaster*
         position: relative;
+        overflow:hidden;
+        border-radius:50rem;
+
+        @supports( clip-path:circle(50% at 50% 50%)){
+            clip-path:circle(50% at 50% 50%);  // draws a circular shape
+            shape-outside: circle(50% at 50% 50%); //make/define where the text flow around shapes
+            border-radius:none;
+        }
+
+        @include respond(phone){
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__image{
@@ -34,6 +54,10 @@
     }
     &__text{
         transform: skewX(12deg); //will take the text in the initial position after the story is skewed
+    
+        @include respond(phone){
+            transform: skewX(0);
+        }
     }
     &__caption{
         position: absolute;

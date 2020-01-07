@@ -58,33 +58,79 @@
 // this is where the front side styling starts for all card
 &__picture{ //holds all the card pictures
     background-size: cover;
-    height: 23rem;
+    height: 22rem;
     background-blend-mode: screen;
     -webkit-background-blend-mode: screen;
     -moz-background-blend-mode: screen;
     -ms-background-blend-mode: screen;
     -o-background-blend-mode: screen;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    -o-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    -moz-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    -ms-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+   
+
+        @supports (clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)){
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            -o-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            -moz-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            -ms-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            height: 23rem;
+        }
+
+
+
+
 
   &--1{ //selects picture for the first card
-    background-image: linear-gradient(to right bottom,
-     $color-secondary-light-1,
-      $color-secondary-light-2),
-    url(../images/nature-qoutes.jpg);
+    background-image:url(../images/nature-qoutes.jpg);
+
+        @supports (background-image: linear-gradient(to right bottom,
+        $color-secondary-light-1,
+         $color-secondary-light-2),
+       url(../images/nature-qoutes.jpg)){
+        background-image: linear-gradient(to right bottom,
+        $color-secondary-light-1,
+         $color-secondary-light-2),
+       url(../images/nature-qoutes.jpg);
+       }
+
+
+
+
+
+
   }
   &--2{ //selects picture for the second card
-    background-image: linear-gradient(to right bottom,
-     $color-primary-light, $color-primary-dark),
-     url(../images/mountain.jpg);
+    background-image:url(../images/mountain.jpg);
+
+
+     @supports (background-image: linear-gradient(to right bottom,
+     $color-primary-light,
+     $color-primary-dark),
+    url(../images//mountain.jpg)){
+     background-image: linear-gradient(to right bottom,
+     $color-primary-light,
+     $color-primary-dark),
+      url(../images/mountain.jpg);
+      -ms-background-image: linear-gradient(to right bottom,
+      $color-primary-light,
+      $color-primary-dark),
+       url(../images/mountain.jpg);
+    }
+
   }
   &--3{ //selects picture for the third card
-    background-image:linear-gradient(to right bottom,
+    background-image:url(../images/wlpp25.jpg);
+
+
+    @supports (background-image:linear-gradient(to right bottom,
     $color-tertiary-light-1, $color-tertiary-light-1),
-     url(../images/wlpp25.jpg);
+     url(../images/wlpp25.jpg)){
+        background-image:linear-gradient(to right bottom,
+        $color-tertiary-light-1, $color-tertiary-light-1),
+         url(../images/wlpp25.jpg);
+
+     }
+
+
   }
 }
 &__heading{
@@ -163,4 +209,66 @@
     font-size:6rem;
     font-weight:100;
 }
+
+
+
+
+
+ //@include respond(tab-port)
+ @media only screen and (max-width: 56.25em),
+ only screen and (hover:none){
+     height:auto;
+     border-radius: .3rem;
+     background-color:$color-white;
+     box-shadow: 0 1.5rem 4rem 0 rgba($color-black, .15);
+
+     
+    &__side{
+        //background-color:orangered;
+        height: auto;
+       box-shadow:none;
+        position: relative;
+        top: 0;
+        left: 0;
+       
+        
+       
+
+        &--back{
+            transform: rotateY(0);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100% );
+
+        }
+    }
+
+
+
+&:hover &__side--front{    //this statement means, when we over the card the sides transform
+     transform: rotateY(0);
+}
+&__details{
+    padding: 1rem 3rem;
+}
+// back side styling starts here
+&__callToAction{
+    position: relative;
+    top:0;
+    left: 0;
+    transform:translate(0) ;
+    width: 100%;
+    padding: 7rem 4rem 4rem 4rem;
+    
+}
+&__price-box{
+  margin-bottom: 3rem;
+
+}
+&__price-only{
+   margin-bottom: 3rem;
+}
+&__price-value{
+    font-size:3rem;
+   
+}
+ }
 }

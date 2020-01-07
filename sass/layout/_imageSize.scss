@@ -2,4 +2,21 @@
     width:100%;
     display: block;
     border-radius: .3rem;
+
+    @include respond(tab-port){
+        display: inline-block;
+        width:40%;
+        float: left;
+        height:20rem;
+        padding-top: 3rem;
+      
+    }
+
+    &:not(:last-child){
+
+        @include respond(tab-port){
+            margin-left: 6rem;
+        }
+       
+    }
 }

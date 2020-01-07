@@ -1,5 +1,5 @@
 .navigation{
-//backface-visibility:hidden;
+backface-visibility:hidden;
 
 &__checkbox{
     display: none;
@@ -17,6 +17,14 @@
     box-shadow: 0 1rem 3rem 0 rgba($color-black,.2);
     text-align:center;
     cursor:pointer;
+    @include respond(tab-port){
+        top: 4rem;
+    right:4rem;
+    }
+    @include respond(phone){
+        top: 3rem;
+    right:3rem;
+    }
 
 }
 
@@ -31,6 +39,15 @@
     z-index: 40;
   //  transform:scale(80);
   transition:all 1.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  @include respond(tab-port){
+    top: 4.5rem;
+right:4.5rem;
+  }
+@include respond(phone){
+    top: 3.5rem;
+right:3.5rem;
+}
 }
 
 &__nav{

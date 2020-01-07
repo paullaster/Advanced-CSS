@@ -7,7 +7,7 @@ font-family: "lato" , sans-serif;
     /*font-size: 16px;*/
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
+    
 }
 
 .heading-primary{
@@ -15,6 +15,8 @@ font-family: "lato" , sans-serif;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 60px;
+
+   
    
    
     &--main{
@@ -25,6 +27,15 @@ font-family: "lato" , sans-serif;
        animation-name: moveInLeft;
        animation-duration: 5s;
        animation-timing-function: ease-out;
+
+       @include respond(tab-port){
+        letter-spacing: 2rem;
+        font-size: 5rem;
+    }
+    @include respond(phone){
+        letter-spacing: 1rem;
+        font-size:4rem;
+    }
        /*
        animation-delay: 2s;
        animation-iteration-count: 3;
@@ -38,6 +49,15 @@ font-family: "lato" , sans-serif;
        animation-name: moveInRight;
        animation-duration: 5s;
        animation-timing-function: ease-in;
+
+       @include respond(tab-port){
+        letter-spacing: 1.5rem;
+       
+    }
+    @include respond(phone){
+        letter-spacing: .8rem;
+        
+    }
       }
    }
    .heading-secondary{
@@ -45,19 +65,36 @@ font-family: "lato" , sans-serif;
         text-transform: uppercase;
         font-weight: 700;
         display: inline-block;
-        background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        letter-spacing: .2rem;
+        transition: all .2s ease;
+        color:$color-primary-light;
+
+
+        @supports ( background-clip: text) or ( -webkit-background-clip: text) or ( -moz-background-clip: text) or (  -ms-background-clip: text) or ( -o-background-clip: text){
+            background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         background-clip: text;
         -webkit-background-clip: text;
-        -mos-background-clip: text;
+        -moz-background-clip: text;
         -o-background-clip: text;
         -ms-background-clip: text;
         color: transparent;
-        letter-spacing: .2rem;
-        transition: all .2s ease;
+        }
+
+
          &:hover{
              transform: skewY(2deg) skewX(15deg) scale(1.1);
              text-shadow: .5rem 1rem 2rem rgba($color-black,  .2);
          }
+
+         @include respond(tab-port){
+             font-size: 2.5rem;
+         }
+
+         @include respond(phone){
+            font-size: 1rem;
+            letter-spacing:0;
+            font-weight:900;
+        }
    }
    .heading-tertiary{
        font-size: $default-font-size;
